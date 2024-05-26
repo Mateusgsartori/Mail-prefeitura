@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.MailActivity"
+    android:layout_margin="10dp">
+
+    <EditText
+        android:id="@+id/edt_assunto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Assunto"
+        android:textSize="18sp"/>
+    
+    <EditText
+        android:id="@+id/edt_corpo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autofillHints="teste"
+        android:hint="Escreva aqui o seu email"
+        android:layout_below="@+id/edt_assunto"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:layout_marginTop="5dp"
+        android:gravity="top"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="Enviar e-mail"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</RelativeLayout>
